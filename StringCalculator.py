@@ -1,5 +1,4 @@
 
 def add (word):
-  if word is "":
-    return 0
+  return 0
   
