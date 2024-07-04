@@ -1,4 +1,5 @@
 
 def add (input):
-  return 2
+  if input is "":
+    return 0
   
