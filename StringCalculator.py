@@ -1,5 +1,5 @@
 
-def add (input):
-  if input is "":
+def add (word):
+  if word is "":
     return 0
   
