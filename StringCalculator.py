@@ -8,6 +8,7 @@ def add (word):
 def extract(word):
   str_wordlist=word.split(",")
   word_split=list(map(int, str_wordlist))
-  return(sum(word_split))
+  t_sum=sum(word_split)
+  return t_sum>1000?t_sum-1000,t_sum
   
   
