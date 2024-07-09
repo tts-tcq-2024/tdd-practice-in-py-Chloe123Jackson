@@ -1,6 +1,6 @@
 
 def add (word):
-  if word == ""
+  if word == "":
     return 0
   else:
     return extract(word)
