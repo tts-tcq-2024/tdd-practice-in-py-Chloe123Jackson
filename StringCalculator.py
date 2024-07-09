@@ -1,6 +1,13 @@
 
 def add (word):
-  if word == "" or word == "0":
+  if word == ""
     return 0
+  else:
+    return extract(word)
+
+def extract(word):
+  str_wordlist=word.split(",")
+  word_split=list(map(int, b)))
+  return(sum(wordsplit))
   
   
