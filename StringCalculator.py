@@ -9,6 +9,6 @@ def extract(word):
   str_wordlist=word.split(",")
   word_split=list(map(int, str_wordlist))
   t_sum=sum(word_split)
-  return t_sum>1000?t_sum-1000,t_sum
+  return {True: t_sum-1000, False: t_sum} [t_sum>1000]
   
   
