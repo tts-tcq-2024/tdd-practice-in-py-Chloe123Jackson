@@ -7,7 +7,7 @@ def add (word):
 
 def extract(word):
   
-  word,delimiter=check_delimiter(word)
+  word,delimiter=check_spec_char(word)
   str_wordlist=word.split(delimiter)
   word_split=list(map(int, str_wordlist))
   for ele in word_split:
@@ -15,18 +15,18 @@ def extract(word):
   t_sum=sum(word_split)
   return t_sum  
 
-def check_delimiter(word):
+def check_spec_char(word):
   regex1 = re.compile('//.\n')
-  regex2 = re.compile('.\n.')
+  #regex2 = re.compile('.\n.')
   matches1 = re.findall(regex1, word)
-  matches2 = re.findall(regex2, word)
+  #matches2 = re.findall(regex2, word)
   delimiter=','
-  
   if matches1!=[]:
     delimiter=matches1[0][2]
     word=word.replace(matches1[0],'')
-  if matches2!=[]:
-    word=word.replace('\n',',')
+  word=word.replace('\n',',')
+  # if matches2!=[]:
+  #   word=word.replace('\n',',')
   return word,delimiter
     
   
