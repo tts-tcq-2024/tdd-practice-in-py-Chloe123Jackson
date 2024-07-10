@@ -34,8 +34,8 @@ class NegativesNotAllowed(Exception):
 try:
     if (ele<0 for ele in word_split):
       raise NegativesNotAllowed
-  except NegativesNotAllowed:
-    print(list(ele if ele in word_split<0))
+except NegativesNotAllowed:
+  print(list(ele if ele in word_split<0))
 
     
   
