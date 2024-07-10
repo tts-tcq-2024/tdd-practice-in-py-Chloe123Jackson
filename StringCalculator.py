@@ -10,6 +10,11 @@ def extract(word):
   word,delimiter=check_spec_char(word)
   str_wordlist=word.split(delimiter)
   word_split=list(map(int, str_wordlist))
+  try:
+    if (ele<0 for ele in word_split):
+      raise NegativesNotAllowed
+  except NegativesNotAllowed:
+    print(list(ele for ele in word_split if ele<0))
   for ele in word_split:
     word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
   t_sum=sum(word_split)
@@ -31,11 +36,7 @@ class NegativesNotAllowed(Exception):
   "Raised when negative value is provided as input"
   pass
 
-try:
-    if (ele<0 for ele in word_split):
-      raise NegativesNotAllowed
-except NegativesNotAllowed:
-  print(list(ele for ele in word_split if ele<0))
+
 
     
   
