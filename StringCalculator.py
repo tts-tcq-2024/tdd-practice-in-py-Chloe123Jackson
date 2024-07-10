@@ -14,7 +14,7 @@ def extract(word):
   matches3 = re.findall(regex3, word)
 
   if matches1!=[]:
-    delimiter=matches[0][2]
+    delimiter=matches1[0][2]
     word=word.replace(matches1[0],'')
     str_wordlist=word.split(delimiter)
     word_split=list(map(int, str_wordlist))
