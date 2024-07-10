@@ -21,7 +21,7 @@ def check_delimiter(word):
   delimiter=','
   
   if matches!=[]:
-    delimiter=matches1[0][2]
+    delimiter=matches[0][2]
     word=word.replace(matches1[0],'')
   return word,delimiter
     
