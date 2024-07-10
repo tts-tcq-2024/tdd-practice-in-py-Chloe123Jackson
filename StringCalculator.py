@@ -10,6 +10,7 @@ def extract(word):
   word,delimiter=check_spec_char(word)
   str_wordlist=word.split(delimiter)
   word_split=list(map(int, str_wordlist))
+  # Commented for now untill logic is figured out
   # try:
   #   if (ele<0 for ele in word_split):
   #     raise NegativesNotAllowed
