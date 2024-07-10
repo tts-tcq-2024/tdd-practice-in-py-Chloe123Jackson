@@ -28,8 +28,8 @@ def check_spec_char(word):
   return word,delimiter
 
 class NegativesNotAllowed(Exception):
-   "Raised when negative value is provided as input"
-   pass
+  "Raised when negative value is provided as input"
+  pass
 
 try:
     if (ele<0 for ele in word_split):
