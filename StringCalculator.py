@@ -16,17 +16,15 @@ def extract(word):
   return t_sum  
 
 def check_spec_char(word):
-  regex1 = re.compile('//.\n')
-  #regex2 = re.compile('.\n.')
-  matches1 = re.findall(regex1, word)
-  #matches2 = re.findall(regex2, word)
+  regex = re.compile('//.*\n')
+  matches = re.findall(regex, word)
   delimiter=','
-  if matches1!=[]:
-    delimiter=matches1[0][2]
-    word=word.replace(matches1[0],'')
+  if matches!=[]:
+    index_1 = matches[0].find('//')
+    index_2 = matches[0].find('\n',//)
+    delimiter=matches[0][index_1+1:index_2]
+    word=word.replace(matches[0],'')
   word=word.replace('\n',',')
-  # if matches2!=[]:
-  #   word=word.replace('\n',',')
   return word,delimiter
     
   
