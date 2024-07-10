@@ -30,7 +30,7 @@ def extract(word):
       t_sum=sum(word_split)
       return t_sum
   if matches3!=[]:
-    word=word.replace(\n,'')
+    word=word.replace('\n','')
     str_wordlist=word.split(',')
     word_split=list(map(int, str_wordlist))
     for ele in word_split:
