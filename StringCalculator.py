@@ -22,7 +22,7 @@ def check_spec_char(word):
   if matches!=[]:
     index_1 = matches[0].find('//')
     index_2 = matches[0].find('\n',index1)
-    delimiter=matches[0][index_1+1:index_2]
+    delimiter=matches[0][index_1+2:index_2]
     word=word.replace(matches[0],'')
   word=word.replace('\n',',')
   return word,delimiter
