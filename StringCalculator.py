@@ -13,12 +13,14 @@ def extract(word):
   try:
     if (ele<0 for ele in word_split):
       raise NegativesNotAllowed
+    else:
+      for ele in word_split:
+        word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
+      t_sum=sum(word_split)
+      return t_sum
   except NegativesNotAllowed:
     print(list(ele for ele in word_split if ele<0))
-  for ele in word_split:
-    word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
-  t_sum=sum(word_split)
-  return t_sum  
+    
 
 def check_spec_char(word):
   regex = re.compile('//.*\n')
