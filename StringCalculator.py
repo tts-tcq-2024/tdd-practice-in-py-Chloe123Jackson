@@ -15,7 +15,7 @@ def extract(word):
 
   if matches1!=[]:
     delimiter=matches[0][2]
-    word=word.replace(matches[0],'')
+    word=word.replace(matches1[0],'')
     str_wordlist=word.split(delimiter)
     word_split=list(map(int, str_wordlist))
     for ele in word_split:
