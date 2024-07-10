@@ -7,7 +7,7 @@ def add (word):
 
 def extract(word):
   regex1 = re.compile('//.\n')
-  regex2 = re.compile(',.,')
+  regex2 = re.compile('.,.')
   regex3 = re.compile('./n.')
   matches1 = re.findall(regex1, word)
   matches2 = re.findall(regex2, word)
@@ -20,30 +20,30 @@ def extract(word):
     word_split=list(map(int, str_wordlist))
     for ele in word_split:
       word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
-      t_sum=sum(word_split)
-      return t_sum
+    t_sum=sum(word_split)
+    return t_sum
   if matches2!=[]:
     str_wordlist=word.split(',')
     word_split=list(map(int, str_wordlist))
     for ele in word_split:
       word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
-      t_sum=sum(word_split)
-      return t_sum
+    t_sum=sum(word_split)
+    return t_sum
   if matches3!=[]:
     word=word.replace('\n','')
     str_wordlist=word.split(',')
     word_split=list(map(int, str_wordlist))
     for ele in word_split:
       word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
-      t_sum=sum(word_split)
-      return t_sum
+    t_sum=sum(word_split)
+    return t_sum
   if matches1==[] and matches2==[] and matches3==[]:
     str_wordlist=word.split(',')
     word_split=list(map(int, str_wordlist))
     for ele in word_split:
       word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
-      t_sum=sum(word_split)
-      return t_sum
+    t_sum=sum(word_split)
+    return t_sum
   
 
 # def check_delimiter(word):
