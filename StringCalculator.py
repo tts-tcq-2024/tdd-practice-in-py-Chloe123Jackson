@@ -18,13 +18,11 @@ def extract(word):
   str_wordlist=word.split(delimiter)
   word_split=list(map(int, str_wordlist))
   neg_num = list(filter(lambda x: (x < 0), word_split))
-  # Commented for now untill logic is figured out
   try:
     if neg_num!=[]:
       raise NegativesNotAllowed
   except NegativesNotAllowed:
     print(neg_num)
-    #print(list(ee for ele in word_split if ele<0))
   return sum_word(word_split)
     
 
