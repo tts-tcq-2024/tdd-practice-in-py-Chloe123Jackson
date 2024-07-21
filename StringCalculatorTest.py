@@ -2,29 +2,30 @@ import unittest
 from StringCalculator import add
 class TestStringCalculator(unittest.TestCase):
         
-        def expectZeroForEmptyInput(self):
+        def test_expectZeroForEmptyInput(self):
                 self.assertEqual(add(""), 0)
                 
-        def expectZeroForSingleZero(self):
+        def test_expectZeroForSingleZero(self):
                 self.assertEqual(add("0"), 0)
                 
-        def expectSumForTwoNumberst(self):
+        def test_expectSumForTwoNumberst(self):
                 self.assertEqual(add("1,2"), 3)
                 
-        def ignoreNumbersGreaterThan1000(self):
+        def test_ignoreNumbersGreaterThan1000(self):
                 self.assertEqual(add("1,1001"), 1)
                 
-        def expectSumWithCustomDelimiter(self):
+        def test_expectSumWithCustomDelimiter(self):
                 self.assertEqual(add("//;\n1;2"), 3)
                 
-        def expectSumWithNewlineDelimiter(self):
+        def test_expectSumWithNewlineDelimiter(self):
                 self.assertEqual(add("1\n2,3"),6);
-        
+                
+        def test_expectSumWithNewlongDelimiter(self):
+                self.assertEqual(add("//***\n1***2"),3);
 
-
-
+        def test_ReturnNegativeNumber(self):
+                self.assertEqual(add("-9,2"),None);         
 
 if __name__ == '__main__':
     unittest.main()
-
 
