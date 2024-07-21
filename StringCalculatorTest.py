@@ -23,8 +23,8 @@ class TestStringCalculator(unittest.TestCase):
         def test_expectSumWithNewlongDelimiter(self):
                 self.assertEqual(add("//***\n1***2"),3);
 
-        # def test_ReturnNegativeNumber(self):
-        #         self.assertEqual(add("-9,2"),[-9]);         
+        def test_ReturnNegativeNumber(self):
+                self.assertEqual(add("-9,2"),[-9]);         
 
 if __name__ == '__main__':
     unittest.main()
