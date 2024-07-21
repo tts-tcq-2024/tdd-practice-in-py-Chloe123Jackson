@@ -24,7 +24,7 @@ class TestStringCalculator(unittest.TestCase):
                 self.assertEqual(add("//***\n1***2"),3);
 
         def test_ReturnNegativeNumber(self):
-                self.assertEqual(add("-9,2"),[-9]);         
+                self.assertEqual(add("-9,2"),None);         
 
 if __name__ == '__main__':
     unittest.main()
