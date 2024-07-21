@@ -20,7 +20,7 @@ def extract(word):
   neg_num = list(filter(lambda x: (x < 0), word_split))
   # Commented for now untill logic is figured out
   try:
-    if neg_num!=[]
+    if neg_num!=[]:
       raise NegativesNotAllowed
   except NegativesNotAllowed:
     print(neg_num)
