@@ -11,11 +11,12 @@ def extract(word):
   str_wordlist=word.split(delimiter)
   word_split=list(map(int, str_wordlist))
   # Commented for now untill logic is figured out
-  # try:
-  #   if (ele<0 for ele in word_split):
-  #     raise NegativesNotAllowed
-  # except NegativesNotAllowed:
-  #   print(list(ele for ele in word_split if ele<0))
+  try:
+    if (ele<0 for ele in word_split):
+      raise NegativesNotAllowed
+  except NegativesNotAllowed:
+    print("Negative")
+    #print(list(ele for ele in word_split if ele<0))
   for ele in word_split:
     word_split[word_split.index(ele)]={True: 0, False: ele} [ele>1000]
   t_sum=sum(word_split)
