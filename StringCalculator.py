@@ -21,9 +21,10 @@ def extract(word):
   try:
     if neg_num!=[]:
       raise NegativesNotAllowed
+    else:
+      return sum_word(word_split)
   except NegativesNotAllowed:
-    print(neg_num)
-  return sum_word(word_split)
+    print(neg_num) 
     
 
 def check_spec_char(word):
